@@ -5,10 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>br.edu.ifpr.pgua.eic.tads</groupId>
-  <artifactId>demo</artifactId>
+  <artifactId>e-commerce</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>demo</name>
+  <name>e-commerce</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
