@@ -1,32 +1,105 @@
-# Desenvolvimento de um Sistema de Gestão Escolar Completo
+# 🛒 Sistema de E-commerce com POO
 
-## Descrição:
-Crie uma aplicação web para gerenciar todas as operações de uma instituição de ensino. Utilize os conhecimentos adquiridos em aula para desenvolver um sistema completo e eficiente, abrangendo as seguintes funcionalidades:
+Este projeto consiste em um sistema simples de E-commerce desenvolvido utilizando os **4 pilares da Programação Orientada a Objetos (POO)**: encapsulamento, herança, polimorfismo e abstração.
 
-## Cadastros e Gestão:
-- **Escola**: Cadastrar incluindo informações detalhadas como nome, endereço, contato.
-- **Alunos**: Cadastrar, listar e excluir alunos, com informações como matrícula, nome completo, CPF, data de nascimento, endereço, telefone, e-mail.
-- **Professores**: Cadastrar, listar e excluir professores, incluindo informações como SIAPE, nome completo, CPF, data de nascimento, endereço, telefone, e-mail.
-- **Disciplinas**: Cadastrar, listar e excluir disciplinas, com informações como código, nome, ementa, carga horária e professor responsável.
+## 📘 Cenário Proposto
 
-Um aluno pode estar matriculado em várias disciplinas e cada disciplina pode ter no máximo 40 alunos.
+Desenvolver um sistema que permita o cadastro de produtos, criação de clientes e administradores, gerenciamento de carrinho de compras e finalização de pedidos com diferentes formas de pagamento.
 
-**Bônus:**
-- Editar escola
-- Editar aluno
-- Editar disciplina
-- Editar professor
+---
 
-## Requisitos
-1. Deve ser implementado utilizando Java
-2. Deve ser implementado utilizando Javalin
-3. Os dados devem ser armazenados em banco de dados relacional
-4. Deve ser utilizada herança
-   
+## 🧱 Estrutura de Classes
 
-## Observações 
+### 1. `Produto`
+- **Atributos**:
+  - `nome`
+  - `preco`
+  - `estoque`
+- **Encapsulamento**:
+  - Atributos privados
+  - Getters e Setters
+- **Método**:
+  - `exibirInformacoes()`: Exibe os detalhes do produto
 
-Na primeira etapa, vamos trabalhar apenas no CRD (Create, read, delete) da nossa aplicação. Quando retornarmos, falaremos e  implementaremos os relacionamentos entre as tabelas de alunos e disciplinas.
+---
 
-# Entrega:
-**14/02/2025 até às 9:10**
+### 2. `Usuário` (Classe Base)
+- **Atributos**:
+  - `nome`
+  - `email`
+- **Método**:
+  - `exibirInformacoes()`
+- **Construtor**:
+  - Inicializa os atributos comuns
+
+---
+
+### 3. `Cliente` (Herda de `Usuário`)
+- **Atributo**:
+  - `carrinho`: Lista de produtos
+- **Métodos**:
+  - `adicionarProduto(produto)`
+  - `listarCarrinho()`
+
+---
+
+### 4. `Administrador` (Herda de `Usuário`)
+- **Métodos**:
+  - `cadastrarProduto(produto)`
+  - `removerProduto(produto)`
+
+---
+
+### 5. `Pagamento` (Classe Abstrata)
+- **Atributo**:
+  - `valor`
+- **Método Abstrato**:
+  - `processarPagamento()`
+
+---
+
+### 6. `PagamentoCartao` e `PagamentoBoleto` (Herdam de `Pagamento`)
+- Implementam o método `processarPagamento()` com comportamentos diferentes (**polimorfismo**)
+
+---
+
+## ⚙️ Funcionalidades Obrigatórias
+
+O sistema deve permitir:
+
+- ✅ Criar um administrador e **cadastrar/remover produtos** no catálogo.
+- ✅ Criar um cliente.
+- ✅ O cliente pode **visualizar produtos disponíveis** e **adicionar ao carrinho**.
+- ✅ O cliente pode **finalizar a compra**, escolhendo entre **pagamento por cartão ou boleto**.
+- ✅ O sistema **processa o pagamento utilizando polimorfismo**.
+- ✅ Ao final, **exibir os detalhes do pedido** no console (ou interface).
+
+---
+
+## 💡 Conceitos de POO Aplicados
+
+- **Encapsulamento**: Atributos privados com acesso por getters/setters.
+- **Herança**: Cliente e Administrador herdam da classe Usuário.
+- **Polimorfismo**: Classes de pagamento implementam o método de forma distinta.
+- **Abstração**: Classe `Pagamento` como base abstrata para outras formas de pagamento.
+
+---
+
+## 🚀 Como Executar
+
+1. Clone este repositório.
+2. Compile e execute o código principal.
+3. Interaja com o sistema por meio do console (ou interface, se houver).
+4. Acompanhe os detalhes da execução conforme os comportamentos esperados.
+
+---
+
+## 🧑‍💻 Contribuição
+
+Sinta-se à vontade para contribuir com melhorias, refatorações ou novas funcionalidades!
+
+---
+
+## 📄 Licença
+
+Este projeto é apenas para fins educacionais e não possui licença específica.
