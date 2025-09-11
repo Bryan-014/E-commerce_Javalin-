@@ -1,3 +1,10 @@
-/home/aluno/Documentos/bryan/e-commerce/src/main/java/br/edu/ifpr/pgua/eic/tads/App.java
-/home/aluno/Documentos/bryan/e-commerce/src/main/java/br/edu/ifpr/pgua/eic/tads/controllers/IndexController.java
-/home/aluno/Documentos/bryan/e-commerce/src/main/java/br/edu/ifpr/pgua/eic/tads/utils/JavalinUtils.java
+/home/aluno/Documentos/bryan/E-commerce_Javalin/src/main/java/com/commerce/models/Cart.java
+/home/aluno/Documentos/bryan/E-commerce_Javalin/src/main/java/com/commerce/models/User.java
+/home/aluno/Documentos/bryan/E-commerce_Javalin/src/main/java/com/commerce/models/Product.java
+/home/aluno/Documentos/bryan/E-commerce_Javalin/src/main/java/com/commerce/models/Client.java
+/home/aluno/Documentos/bryan/E-commerce_Javalin/src/main/java/com/commerce/App.java
+/home/aluno/Documentos/bryan/E-commerce_Javalin/src/main/java/com/commerce/models/abstracts/Payment.java
+/home/aluno/Documentos/bryan/E-commerce_Javalin/src/main/java/com/commerce/Utils/JavalinUtils.java
+/home/aluno/Documentos/bryan/E-commerce_Javalin/src/main/java/com/commerce/models/Admin.java
+/home/aluno/Documentos/bryan/E-commerce_Javalin/src/main/java/com/commerce/models/PaymentInvoice.java
+/home/aluno/Documentos/bryan/E-commerce_Javalin/src/main/java/com/commerce/models/PaymentCard.java
